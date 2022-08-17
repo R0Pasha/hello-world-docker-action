@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     
     env: 
-      x: kj
+      x: 40
       y: 55
     # Steps represent a sequence of tasks that will be executed as part of the job 
     steps:
