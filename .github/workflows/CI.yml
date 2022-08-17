@@ -32,4 +32,4 @@ jobs:
     #    run:   echo "deploy_target is ${{ inputs.Number_one }}"
         
       - name: Run a Python script 
-        run: python3 ${{ env.Python_file }} x y
+        run: python3 ${{ env.Python_file }} ${{ env.x }} ${{ env.y }}
