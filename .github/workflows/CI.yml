@@ -12,31 +12,16 @@ on:
   pull_request:
     branches: [ "main" ]
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_call:
-   inputs:
-      Number_one: # id of input
-        description: 'Who to greet'
-        required: false
-        type: string
-        default: 44
-      Number_two: # id of input
-        description: 'Number two'
-        required: false
-        type: string 
-        default: 58
-      
- 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+
 jobs:
   # This workflow contains a single job called "build"
   Python_nambers:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     
-    #env: 
-     # x: 40
-      #y: 55
+    env: 
+      x: 40
+      y: 55
     # Steps represent a sequence of tasks that will be executed as part of the job 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it 
@@ -47,4 +32,4 @@ jobs:
     #    run:   echo "deploy_target is ${{ inputs.Number_one }}"
         
       - name: Run a Python script 
-        run: python3 ${{ env.Python_file }} ${{ inputs.Number_one }} ${{ inputs.Number_two }}
+        run: python3 ${{ env.Python_file }} x y
